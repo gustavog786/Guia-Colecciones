@@ -14,5 +14,32 @@ al usuario.
 package entidad;
 
 public class Pais {
+    private String nombre;
+    
+    //contructores
+
+    public Pais() {
+    }
+
+    public Pais(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    //getter y setters
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    // to String
+
+    @Override
+    public String toString() {
+        return "Pais{" + "nombre=" + nombre + '}';
+    }
     
 }

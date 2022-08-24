@@ -13,10 +13,16 @@ al usuario.
  */
 package principal;
 
+import servicio.ServicioPais;
+
 public class PrincipalEjer05 {
     
     public static void main(String[] args) {
         // TODO code application logic here
+        ServicioPais sp= new ServicioPais();
+        sp.crearpais();
+        sp.ordenarConjunto();
+        sp.eliminarPais();   
     }
 
 }
