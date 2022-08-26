@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class ServicioProducto {
     
     private Scanner scan = new Scanner(System.in).useDelimiter("\n");
-    HashMap<String, Float> mapaProducto = new HashMap();
+    private HashMap<String, Float> mapaProducto = new HashMap();
     
     
     
@@ -40,6 +40,7 @@ public class ServicioProducto {
     }
     
     //metodo para modificar el precio del producto
+    /*
     public void modificarPrecio(){
         System.out.println("Ingrese el producto al que quiere modificar el precio: ");
         String auxprod= scan.next();
@@ -58,18 +59,19 @@ public class ServicioProducto {
             System.out.println("El producto no se encuentra en el mapa ");
         }
     }
+    */
     //modificar precio mauro
-    public void modifica
-    System.out.println("Ingrese el producto a actualizar su precio");
-        String producto = sn.next();
-        if (!productos.containsKey(producto)) {
+    public void modificarPrecio(){
+        System.out.println("Ingrese el producto a actualizar su precio");
+        String producto = scan.next();
+        if (!mapaProducto.containsKey(producto)) {
             System.out.println("El producto no se encuentra en la lista");
             return;
-        }
+        }else{
         System.out.println("Ingrese el nuevo precio del producto");
-        int precio = sn.nextInt();
-        productos.replace(producto, precio);
-
+        Float precio = scan.nextFloat();
+        mapaProducto.replace(producto, precio);
+        }
     }
 
     
@@ -77,6 +79,11 @@ public class ServicioProducto {
     public void eliminarProducto(){
         System.out.println("Ingrese el producto a eliminar: ");
         String auxprod= scan.next();
-        mapaProducto.remove(auxprod);
+        if (mapaProducto.containsKey(auxprod)) {
+            mapaProducto.remove(auxprod);
+            return;
+        }
+        System.out.println("El producto no se encuentra en la lista");
+        return;
     }
 }

@@ -23,20 +23,21 @@ public class PrincipalEjer06 {
         ServicioProducto sp = new ServicioProducto();
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
         System.out.println("Bienvenido al menu: ");
-        int opcion;
+        int opcion = 20;
     do {
         do {
              System.out.println("Ingrese la operacion a realizar:\n1. crear un producto\n2. "
             + "Mostrar la lista de productos\n3. Modificar el precio de un producto\n4. Eliminar un producto\n0. Salir");
-             
+             /*
             try {
             opcion=scan.nextInt();
             }catch(InputMismatchException ex) {
                 System.out.println("Error, ingrese un numero ");
-                opcion=scan.nextInt();
             }
+            */
+            opcion=scan.nextInt();
             
-        } while (opcion!=1 || opcion!=2 || opcion!=3 || opcion!=4 || opcion!=0 );
+        } while (opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=0 );
         
        
             switch(opcion)
