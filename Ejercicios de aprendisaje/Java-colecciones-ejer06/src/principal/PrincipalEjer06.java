@@ -9,7 +9,6 @@ Realizar un menú para lograr todas las acciones previamente mencionadas.
  */
 package principal;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import servicio.ServicioProducto;
 
@@ -28,14 +27,14 @@ public class PrincipalEjer06 {
         do {
              System.out.println("Ingrese la operacion a realizar:\n1. crear un producto\n2. "
             + "Mostrar la lista de productos\n3. Modificar el precio de un producto\n4. Eliminar un producto\n0. Salir");
-             /*
+             
             try {
-            opcion=scan.nextInt();
-            }catch(InputMismatchException ex) {
+            opcion=Integer.parseInt(scan.next());
+            break;
+            }catch(NumberFormatException ex) {
                 System.out.println("Error, ingrese un numero ");
             }
-            */
-            opcion=scan.nextInt();
+            
             
         } while (opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=0 );
         

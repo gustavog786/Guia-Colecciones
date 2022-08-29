@@ -66,7 +66,6 @@ public class ServicioProducto {
         String producto = scan.next();
         if (!mapaProducto.containsKey(producto)) {
             System.out.println("El producto no se encuentra en la lista");
-            return;
         }else{
         System.out.println("Ingrese el nuevo precio del producto");
         Float precio = scan.nextFloat();
@@ -81,9 +80,8 @@ public class ServicioProducto {
         String auxprod= scan.next();
         if (mapaProducto.containsKey(auxprod)) {
             mapaProducto.remove(auxprod);
-            return;
-        }
+        }else{
         System.out.println("El producto no se encuentra en la lista");
-        return;
+        }
     }
 }
