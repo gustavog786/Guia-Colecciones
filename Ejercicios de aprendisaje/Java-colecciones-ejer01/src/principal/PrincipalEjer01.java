@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Principal {
+public class PrincipalEjer01 {
 
     
     public static void main(String[] args) {

@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-public class Principal {
+public class PrincipalEjer02 {
 
   
     public static void main(String[] args) {
@@ -55,6 +55,5 @@ public class Principal {
         for (String string : razasPerro) {
                 System.out.println(string);
         }
-    }
-    
+    }   
 }

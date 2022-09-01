@@ -22,17 +22,18 @@ public class PrincipalEjer06 {
         ServicioProducto sp = new ServicioProducto();
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
         System.out.println("Bienvenido al menu: ");
-        int opcion = 20;
+        int opcion= 20;
     do {
         do {
              System.out.println("Ingrese la operacion a realizar:\n1. crear un producto\n2. "
             + "Mostrar la lista de productos\n3. Modificar el precio de un producto\n4. Eliminar un producto\n0. Salir");
              
             try {
-            opcion=Integer.parseInt(scan.next());
-            break;
-            }catch(NumberFormatException ex) {
-                System.out.println("Error, ingrese un numero ");
+                opcion = 20; // se reinicia con una opcion diferente a una valida
+                opcion=Integer.parseInt(scan.next());
+                break;
+                }catch(Exception ex) {
+                    System.out.println("Error, ingrese un numero ");
             }
             
             

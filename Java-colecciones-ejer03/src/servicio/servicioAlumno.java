@@ -51,13 +51,20 @@ public class servicioAlumno {
     */
     public void notaFinal(){
         char opc;
+        int cont = 0;
         do {
             System.out.println("Ingrese el nobra del alumno para saber su nota final: ");
             String alu=scan.next();
+            
             for (Alumno alumno : alumnos) {
             if (alumno.getNombre().equals(alu)) {
                 System.out.println("La nota final de alumno es: "+ calculoNotaFinal(alumno));
-                }else{System.out.println("El Alumno ingresado no se encuentra en la lista");}
+                }else{
+                cont = cont +1;
+            }
+            }
+            if (cont == alumnos.size()){
+                System.out.println("El alumno no se encuentra en la lista");
             }
             System.out.println("Desea saber la nota final de otro alumno? s/n ");
             opc = scan.next().charAt(0);
